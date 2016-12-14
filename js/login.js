@@ -56,6 +56,7 @@ function onClickSignIn()
 
 	$.ajax(settings).done(function (response) {
 		var cookie_data = $.parseJSON(response);
-		createCookie("token101", cookie_data.token, 1);
+		createCookie("token", cookie_data.token, 1);
+		window.location.replace("./index.html")
 	});
 }
