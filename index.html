@@ -11,6 +11,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/login.js"></script>
+  <script src="js/postImage.js"></script>
 </head>
 
 
@@ -21,17 +22,11 @@
     <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">InstAIgram</a>
 	
       <ul class="right hide-on-med-and-down">
-	  <script>
-			  if ($.cookie('token')) 
-				{
-				 
-				}
-				else
-				{
+	  
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Register</a></li>	
-				}
-		</script>
+				
+
 	  </ul>
 
 	 <!-- Mobile view ============================-->
@@ -45,13 +40,34 @@
   </nav>
 <!-- Navigation ends-->
   
-  
-  
-<!-- 02. Middle Content --> 
-  <div id="index-banner" class="parallax-container">
-  
-  
+<!-- 02. Middle Content -->
+  <div id="index-banner" class="container">
+         <div class="row">
+                <div class="col s12 m5">
+                <div class="card-panel teal">
+                <span class ="white-text">
+                        Welcome to InstAIgram! The newest, and most exciting social media outlet to date. Post a Photo, and check out
+ friends posts below.
+                </span>
+                </div>
+                </div>
+        </div>
+        <form action="#">
+        <div class="file-field input-field">
+              <div class="btn">
+                <span>File</span>
+                <input type="file">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </form>
+        <div class="button col s6">
+        <a class="waves-effect waves-light btn" onclick="postPhoto(file, readCookie(token););">Upload!</a>
+        </div>
   </div>
+
    
 
 
